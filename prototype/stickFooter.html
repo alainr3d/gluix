@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<style>
+		body {
+			background-color: #F0FFFF;
+		}
+		#mobileContainer {
+			width: 100%;
+			height: 100%;
+			background-color: white;
+		}
+		#overlay {
+			display: none;
+			z-index: 2;
+			background: #000;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			text-align: center;
+		}
+		#overlayForm {
+			display: none;
+			position: relative;
+			z-index: 3;
+			margin: 0px auto 0px auto;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			color: #000;
+			text-align: center;
+			padding: 10px 0;
+		}
+		#overlayForm > input, .textBox {
+			width: 80%;
+			margin-bottom: 10px;
+		}
+		#inqField {
+			height: 200px;
+		}
+		#sendButton {
+			background-color: #00ff00;
+			border: 2px solid #006600;
+		}
+		#cancelButton {
+			background-color: red;
+			border: 2px solid #cc0000;
+		}
+		#confirmation {
+			display: none;
+			position: relative;
+			z-index: 3;
+			margin: 0px auto 0px auto;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			color: #000;
+			text-align: center;
+			padding: 10px 0;
+		}
+		#stickyButton {
+			position: fixed;
+			bottom: 5px;
+			right: 5px;
+			padding-left: 24px;
+		}
+	</style>
+	<script type="text/javascript">
+		function toggleOverlay(){
+			var overlay = document.getElementById('overlay');
+			var overlayForm = document.getElementById('overlayForm');
+			overlay.style.opacity = .8;
+			if(overlay.style.display == "block"){
+				overlay.style.display = "none";
+				overlayForm.style.display = "none";
+			} else {
+				overlay.style.display = "block";
+				overlayForm.style.display = "block";
+			}
+		}
+		
+		function toggleConfirmation(){
+			var overlay = document.getElementById('overlay');
+			var confirmation = document.getElementById('confirmation');
+			overlay.style.opacity = .8;
+			if(overlay.style.display == "block"){
+				overlay.style.display = "none";
+				confirmation.style.display = "none";
+			} else {
+				overlay.style.display = "block";
+				confirmation.style.display = "block";
+				test.style.display = "none";
+			}
+			
+			/*
+			setTimeout(function() {
+			var overlay = document.getElementById('overlay');
+			var confirmation = document.getElementById('confirmation');
+			confirmation.fadeOut('fast');
+			}, 100); // <-- time in milliseconds
+			*/
+			
+		}
+		</script>
+	</head>
+	
+	<body>
+		<div id="mobileContainer">
+		
+			<div id="overlay"></div>
+			
+			<div  id="overlayForm">
+				<form id="test">
+					<input class="textBox break-word" id="inqField" type="text" name="inquiry" value="inquiry"><br>
+					<input class="textBox break-word" type="text" name="emailAddress" value="email address"><br>
+					<button class="textBox" id="sendButton" type="button" onmousedown="toggleConfirmation() ">send</button><br>
+					<button class="textBox" id="cancelButton" type="button" onmousedown="toggleOverlay() ">cancel</button>
+				</form>
+				<div id="confirmation">
+				<span>THANK YOU!<span>
+				</div>
+			</div>
+			
+			<div id="stickyButton">
+				<button onmousedown="toggleOverlay() ">Inquire</button>
+			</div>
+		</div>
+	</body>
+</html>
