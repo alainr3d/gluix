@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Inquiry overlay form and components</title>
+		<meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+		<style>
+		body {
+			text-align: center;
+		}
+		.font-helvetica {
+			font-family: "Trebuchet MS", Helvetica, sans-serif;
+		}
+		.gray-theme {
+			background-color: #C8C8C8;
+			border: 1px solid black;
+		}
+		.block {
+		}
+		
+		.inquiry-overlay-container {
+			background-color: #C8C8C8;
+			width: 100%;
+		}
+		.inquiry-overlay-button  {
+			border-radius: 3px;
+			width: 60px;
+			height: 25px;
+		}
+		.inquiry-overlay-textfield {
+			width: 80%;
+			height: 200px;
+			padding-left: 5px;
+		}
+		.inquiry-overlay-email-textfield {
+			width: 80%;
+			height: 25px;
+			padding-left: 5px;
+		}
+		.inquiry-overlay-sendbutton {
+			background-color: #00ff00;
+			width: 80%;
+			height: 35px;
+		}
+		.inquiry-overlay-cancelbutton {
+			background-color: red;
+			width: 80%;
+			height: 35px;
+		}
+		.inquiry-overlay-thankyou {
+			border: none;
+		}
+		
+		</style>
+		<script type="text/javascript">
+		</script>
+	</head>
+	
+	<body>
+	
+		<button class="inquiry-overlay-button font-helvetica gray-theme" >Inquire</button> 
+		
+		<div class="inquiry-overlay-container">
+			<input class="inquiry-overlay-textfield gray-theme block"  type="text" name="inquiry" value="tell me more about your project"> </br>
+			<input class="inquiry-overlay-email-textfield gray-theme block"  type="text" name="inquiry" value="your email"> </br>
+			<button class="inquiry-overlay-sendbutton gray-theme block" >send</button> </br>
+			<button class="inquiry-overlay-cancelbutton gray-theme block" >cancel</button> </br>
+			
+			<p class="inquiry-overlay-thankyou">Thank you!</p>
+			
+		</div>
+		
+	</body>
+</html>
+
+
+
+
+
